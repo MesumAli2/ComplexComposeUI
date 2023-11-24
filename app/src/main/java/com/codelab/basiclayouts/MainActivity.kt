@@ -265,6 +265,7 @@ fun MySootheAppLandscape(){
 @Composable
 fun MySootheApp() {
     // Implement composable here
+    HomeScreen()
 }
 
 private val alignYourBodyData = listOf(
