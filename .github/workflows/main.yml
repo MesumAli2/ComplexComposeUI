@@ -15,7 +15,10 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v3.13.0 
         with:
-          java-version: 1.8
+          distribution: 'temurin' # or 'microsoft'
+          java-version: '17'
+      - name: Accept Android SDK licenses
+        uses: android-actions/setup-android@v2.1.0
       - name: Build with Gradle 
         run: /gradlew build
       - name: Upload APK
@@ -23,8 +26,3 @@ jobs:
         with:
           name: app
           path: app/build/outputs/apk/debug/app-debug.apk
-
-        
-      
-
-    
